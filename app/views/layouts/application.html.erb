@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Evaluate My Ideas</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag 'jquery-latest.min' %>
+  <%= javascript_include_tag 'rails' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+  <div id="site">
+    <div id="header">
+      <h1><%= link_to 'Evaluate My Ideas', root_path %> </h1>
+    </div> <!-- #header -->
+
+    <div id="yield">
+      <%= yield %>
+    </div> <!-- #yield -->
+    <br style="clear:both"/>
+
+    <div id="footer">
+      &copy; <%= link_to 'Evaluate My Ideas', root_path %>. All rights reserved.
+    </div> <!-- #footer -->
+  </div> <!-- #site -->
+
+</body>
+</html>

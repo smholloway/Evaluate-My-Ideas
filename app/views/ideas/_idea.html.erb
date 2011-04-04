@@ -1,0 +1,31 @@
+<div class="idea-listing">
+  <div class="left">
+    <div class="title">
+      <%= idea.title %>
+    </div>
+    <div class="description">
+      <%= idea.description %>
+    </div>
+    <% if idea.link %>
+    <div class="link">
+      Demo: <%= link_to idea.link, idea.link %>
+    </div>
+    <% end %>
+  </div> <!-- div.left -->
+  <div class="right">
+    <div class="votes">
+      <div class="votebox">
+        votes
+      </div>
+      <% if idea.votes > 100 %>
+      100+
+      <% else %>
+      <%= idea.votes %>
+      <% end %>
+    </div>
+    <div class="upvote">
+      <%= link_to 'I like it!', idea_path(idea)+'/add_one' %>
+    </div>
+  </div>
+  <br style="clear:both" />
+</div> <!-- div.right -->
